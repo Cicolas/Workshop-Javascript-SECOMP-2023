@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    font-size: .9vw;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(252deg, #12CBC4 0%, #0652DD 100%);
+}
+
+#container {
+    display: flex;
+    width: 37.5rem;
+    height: 50rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    background-color: #F0FFFF;
+    box-shadow: 8px 8px 50px 0px rgba(0, 0, 0, 0.25);
+}
+
+#container > #cabecalho {
+    display: flex;
+    height: 6rem;
+    padding: 1rem 2rem;
+    align-items: center;
+    gap: 0.625rem;
+    flex-shrink: 0;
+    align-self: stretch;
+
+    background-color: #FFC312; 
+
+    color: #111;
+    font-family: Roboto;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.15rem; 
+
+}
+
+#container > #corpo {
+    display: flex;
+    padding: 2rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+
+#container > #corpo > #botoes {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    align-self: stretch; 
+}
+
+.botao-acao {
+    display: flex;
+    padding: 0.5rem 1rem;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.625rem;
+
+    border-radius: 0.5rem;
+
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    color: #1E1E1E;
+    font-family: Roboto;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.1rem; 
+}
+
+.botao-acao#limpar {
+    background: rgba(234, 32, 39, 0.50);
+}
+.botao-acao#novo {
+    background: rgba(18, 203, 196, 0.50)
+}
+
+#container > #corpo > #lista {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    flex: 1 0 0;
+    align-self: stretch;
+
+    list-style: none;
+    overflow-y: auto;
+}
+
+.item {
+    display: flex;
+    height: 3rem;
+    padding: 0.5rem 2rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    align-self: stretch;
+    position: relative;
+}
+
+.item > input[type="checkbox"] {
+    width: 2rem;
+    height: 2rem;
+    min-width: 2rem;
+}
+
+.item > span {
+    flex-grow: 1;
+    color: #000;
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.1rem;
+    max-width: 80%;
+    max-lines: 1;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+    overflow: hidden;
+}
+
+.item > .ph-trash {
+    transition: 200ms;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.item > .ph-trash:hover {
+    transition: 200ms;
+    color: rgba(234, 32, 39);
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Compras</title>
+
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="container">
+    <section id="cabecalho">
+      Lista de Compras
+    </section>
+
+    <section id="corpo">
+      <div id="botoes">
+        <button onclick="limparLista()" id="limpar" class="botao-acao">
+          limpar
+        </button>
+        <button onclick="novoItem()" id="novo" class="botao-acao">
+          + novo
+        </button>
+      </div>
+
+      <ul id="lista">
+        <li id="item-0" class="item">
+          <input type="checkbox"/>
+          <span contenteditable>2kg de Tomate</span>
+          <i onClick="removerItem(0)" class="ph ph-trash"></i>
+        </li>
+      </ul>
+    </section>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
